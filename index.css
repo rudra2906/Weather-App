@@ -1,0 +1,272 @@
+
+* , *::before , *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+    overflow: hidden;
+}
+
+:root
+{
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+#wrapper
+{
+    background-image: linear-gradient(160deg , #112D4E 0% , #3F72AF 100% );
+    height: 100vh;
+    width: 100vw;
+    color: var(--colorLight2);
+}
+
+.heading-weather
+{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    letter-spacing: 1.5px;
+
+}  
+
+.tab-container
+{
+    margin: 0 auto;
+    margin-top: 4rem;
+    max-width: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab
+{
+    cursor: pointer;
+    letter-spacing: 1.75px;
+    font-size: 0.875rem ;
+    padding: 5px 8px ;
+}
+.tab.current
+{
+    border-radius: 4px;
+    background-color: rgba(219, 226 , 239 , 0.5);
+}
+
+.weather-container
+{
+    margin-block: 4rem;
+}
+
+.location-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.grant-location
+{
+    display: none;
+}
+
+.grant-location.active
+{
+    display: flex;
+}
+
+.btn
+{
+    all: unset;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    margin-bottom: 20%;
+    margin-top: 5%;
+}
+
+.grant-location img
+{
+    margin-bottom: 2rem;
+}
+
+.grant-location p:first-of-type
+{
+    font-size: 1.76rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.grant-location p:last-of-type
+{
+    margin: 1rem 0;
+    letter-spacing: 0.75px; 
+    font-weight: 500;
+    font-size: 0.90rem;
+}
+
+.loading-container p
+{
+    text-transform: uppercase;
+}
+
+.loading-container
+{
+    display: none;
+}
+.loading-container.active{
+    display:flex;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.name p
+{
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.name img
+{
+    width: 30px;
+    height: 30px;
+}
+
+.dataweatherdisc
+{
+    font-weight: 200;
+    font-size: 1.8rem;
+
+}
+
+.weatherIconimg
+{
+    width: 100px;
+    height: 100px;
+}
+
+.user-info-container{
+    margin-top: 3rem;
+    display: none;
+}
+.user-info-container.active{
+    display: flex;
+}
+
+.user-info-container p[data-temp]
+{
+    font-weight: 700;
+    font-size: 3rem;
+    
+}
+.cards
+{
+    margin-top: 2rem;
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    
+}
+
+.c{
+
+    width: 30%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(219, 226 , 239 , 0.5);
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    gap: 5px 0 ;
+
+}
+.cards img{
+    width: 50px;
+    height: 50px;
+
+}
+.c p:first-of-type{
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.c p:last-of-type
+{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.form-container
+{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+}
+.form-container.active
+{
+    display: flex;
+}
+
+.form-container input{
+    all: unset;
+    background-color: rgba(219, 226 , 239 , 0.5);
+    padding: 0 20px;
+    border-radius: 10px;
+    height: 40px;
+    width: calc(100% - 80px);
+}
+
+.form-container input::placeholder{
+    color: rgba(255, 255 , 255 , 0.5);
+    text-transform: capitalize;
+
+}
+
+.form-container input:focus{
+    outline: 3px solid rgba(255, 255 , 255 , 0.5);
+}
+
+.form-container button
+{
+    all:unset;
+    padding: 1px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+
+}
+/* error handling */
+.errorSection
+{
+    display: none;
+}
+.errorSection.active{
+    display: block;
+    width: 50%;
+    height: 50%;
+    margin: 0 30%;
+    
+        
+}
